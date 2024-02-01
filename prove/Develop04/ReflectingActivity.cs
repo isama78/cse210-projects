@@ -47,12 +47,10 @@ public class ReflectingActivity : Activity
             int randomNumber = randomGenerator.Next(0, _questions.Count);
             if (!_shownQuestions.Contains(randomNumber))
             {
-                Console.WriteLine(randomNumber);
                 _shownQuestions.Add(randomNumber);
                 return _questions[randomNumber];
             }
         }
-        Console.WriteLine("AHORA SI RANDOM");
         Random randomGenerator2 = new Random();
         int randomNumber2 = randomGenerator2.Next(0, _questions.Count);
         return _questions[randomNumber2];
