@@ -25,12 +25,34 @@ class Program
                 emailLogin = Console.ReadLine();
                 if(registry.IsUsernameTaken(userNameLogin) && registry.IsEmailTaken(emailLogin))
                 {
+                    string userSelection3;
+                    Console.WriteLine("");
                     Console.WriteLine($"Welcome {userNameLogin}!!");
                     Console.WriteLine("1. Create a task");
                     Console.WriteLine("2. Edit a task");
                     Console.WriteLine("3. Mark a task as complete");
                     Console.WriteLine("4. Delete a task");
                     Console.WriteLine("5. Show all tasks");
+                    Console.WriteLine("Select an option");
+                    userSelection3 = Console.ReadLine();
+                    if(userSelection3 == "1")
+                    {
+                        string project;
+                        string title;
+                        string description;
+                        string deadLineString;
+                        DateTime deadLine;
+                        Console.WriteLine("Project");
+                        project = Console.ReadLine();
+                        Console.WriteLine("Title:");
+                        title = Console.ReadLine();
+                        Console.WriteLine("Description:");
+                        description = Console.ReadLine();
+                        Console.WriteLine("Deadline:");
+                        deadLineString = Console.ReadLine();
+                        deadLine = DateTime.Parse(deadLineString);
+                    }
+
                 }
                 else
                 {
